@@ -4,41 +4,26 @@ using UnityEngine;
 
 public class PlayerTestState : PlayerBaseState
 {
-    private float timeRemaining;
-    public PlayerTestState(PlayerStateMachine stateMachine, float timerLimit) : base(stateMachine)
-    {
-        this.timeRemaining = timerLimit;
-    }
+    
+    public PlayerTestState(PlayerStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
-        Debug.Log("Enter");
-        stateMachine.InputReader.JumpEvent += OnJump;
+
     }
 
     public override void Tick(float deltaTime)
     {
-        
-        
-        if (timeRemaining > 0)
-        {
-            timeRemaining -= Time.deltaTime;
-            //Debug.Log(timeRemaining);
-        }
-        else
-        {
-            //stateMachine.SwitchState(new PlayerTestState(stateMachine, 5f));
-        }
-    }
+        Vector3 movementDir = new Vector3();
+        movementDir.x = stateMachine.InputReader.MovementValue.x;
+        movementDir.y = 0;
+        movementDir.z = stateMachine.InputReader.MovementValue.y;
 
-    private void OnJump()
-    {
-        stateMachine.SwitchState(new PlayerTestState(stateMachine,10f));
+        stateMachine.transform.Translate(movementDir * deltaTime);
     }
 
     public override void Exit()
     {
-        Debug.Log("Exit");
-        stateMachine.InputReader.JumpEvent -= OnJump;
+        
     }
 }
