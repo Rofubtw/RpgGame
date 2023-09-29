@@ -1866,6 +1866,7 @@ GameObject:
   - component: {fileID: 5803832944447786329}
   - component: {fileID: 5803832944447786328}
   - component: {fileID: 5812364806831059689}
+  - component: {fileID: 5320284547992475667}
   m_Layer: 0
   m_Name: PlayerMaria
   m_TagString: Player
@@ -1907,7 +1908,9 @@ MonoBehaviour:
   <Controller>k__BackingField: {fileID: 5812364806831059689}
   <Animator>k__BackingField: {fileID: 6044629057651804272}
   <Targeter>k__BackingField: {fileID: 622067535293878881}
-  <FreeLookMovementSpeed>k__BackingField: 4
+  <ForceReceiver>k__BackingField: {fileID: 5320284547992475667}
+  <FreeLookMovementSpeed>k__BackingField: 6
+  <TargetingMovementSpeed>k__BackingField: 5
   <RotationDamping>k__BackingField: 10
 --- !u!114 &5803832944447786328
 MonoBehaviour:
@@ -1939,6 +1942,19 @@ CharacterController:
   m_SkinWidth: 0.025
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.875, z: 0}
+--- !u!114 &5320284547992475667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803832944447786327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06aa4fc833c2e341bf87040c9e889d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 5812364806831059689}
 --- !u!1 &5843855028989223542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,6 +2318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fde51da3da0494480d8c80daa28e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cineTargetGroup: {fileID: 0}
 --- !u!1 &7217906213469719833
 GameObject:
   m_ObjectHideFlags: 0
