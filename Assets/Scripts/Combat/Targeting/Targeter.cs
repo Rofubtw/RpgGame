@@ -8,10 +8,15 @@ public class Targeter : MonoBehaviour
 {
     [SerializeField] private CinemachineTargetGroup cineTargetGroup;
 
-    private List<Target> targets = new List<Target>();
-
     public Target CurrentTarget { get; private set; }
 
+    private List<Target> targets = new List<Target>();
+    private Camera mainCamera;
+
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(!other.TryGetComponent<Target>(out var target)) return;
@@ -32,7 +37,30 @@ public class Targeter : MonoBehaviour
     {
         if(targets.Count == 0) return false;
 
-        CurrentTarget = targets[0];
+        Target closestTarget = null;
+        float closestTargetDistance = Mathf.Infinity;
+
+        Vector2 originScreen = new Vector2(0.5f, 0.5f);
+
+        foreach (var target in targets)
+        {
+            Vector2 viewPos = mainCamera.WorldToViewportPoint(target.transform.position);
+
+            if(viewPos.x < 0 || viewPos.x > 1 || viewPos.y < 0 || viewPos.y > 1)
+            {
+                continue;
+            }
+
+            Vector2 toCenter = viewPos - originScreen;
+            if (toCenter.sqrMagnitude < closestTargetDistance)
+            {
+                closestTarget = target;
+                closestTargetDistance = toCenter.sqrMagnitude;
+            }
+        }
+        if (closestTarget == null) return false;
+
+        CurrentTarget = closestTarget;
         cineTargetGroup.AddMember(CurrentTarget.transform, 1f, 2f);
         return true;
     }
