@@ -40,7 +40,7 @@ public class Targeter : MonoBehaviour
         Target closestTarget = null;
         float closestTargetDistance = Mathf.Infinity;
 
-        Vector2 originScreen = new Vector2(0.5f, 0.5f);
+        Vector2 centerScreen = new Vector2(0.5f, 0.5f);
 
         foreach (var target in targets)
         {
@@ -51,7 +51,7 @@ public class Targeter : MonoBehaviour
                 continue;
             }
 
-            Vector2 toCenter = viewPos - originScreen;
+            Vector2 toCenter = viewPos - centerScreen;
             if (toCenter.sqrMagnitude < closestTargetDistance)
             {
                 closestTarget = target;
