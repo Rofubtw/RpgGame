@@ -5,9 +5,9 @@ using UnityEngine;
 public class ForceReceiver : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
-    [SerializeField] private float drag = 0.3f;
+    [SerializeField] private float drag = 0.1f;
 
-    public Vector3 Movement => Vector3.up * verticalVelocity;
+    public Vector3 Movement => impact + Vector3.up * verticalVelocity;
 
     private Vector3 impact;
     private Vector3 dampingVelocity;
