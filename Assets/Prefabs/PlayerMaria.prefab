@@ -1936,6 +1936,7 @@ MonoBehaviour:
     <ComboAttackTime>k__BackingField: 0.6
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 15
+    <Knockback>k__BackingField: 15
   - <AnimationName>k__BackingField: Attack2
     <Damage>k__BackingField: 15
     <TransitionDuration>k__BackingField: 0.1
@@ -1943,6 +1944,7 @@ MonoBehaviour:
     <ComboAttackTime>k__BackingField: 0.5
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 15
+    <Knockback>k__BackingField: 20
   - <AnimationName>k__BackingField: Attack3
     <Damage>k__BackingField: 20
     <TransitionDuration>k__BackingField: 0.2
@@ -1950,6 +1952,7 @@ MonoBehaviour:
     <ComboAttackTime>k__BackingField: 0
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 20
+    <Knockback>k__BackingField: 25
   <WeaponDamage>k__BackingField: {fileID: 3063092143472026514}
 --- !u!114 &5803832944447786328
 MonoBehaviour:
@@ -1994,6 +1997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5812364806831059689}
+  agent: {fileID: 0}
   drag: 0.1
 --- !u!114 &233783735316853637
 MonoBehaviour:

@@ -235,6 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2277825662610724170}
   - component: {fileID: 4886712527259417953}
+  - component: {fileID: 6455118153304254277}
   m_Layer: 0
   m_Name: Warrok W Kurniawan
   m_TagString: Untagged
@@ -280,6 +281,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6455118153304254277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501852566355316720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75cabae47327b3141a4f1e64f9cafa7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponLogic: {fileID: 5630538385617875754}
 --- !u!1 &1619222032252869588
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +654,7 @@ Transform:
   - {fileID: 6482154377082550052}
   - {fileID: 4893612102085796606}
   - {fileID: 6780449918988205815}
+  - {fileID: 3641462918607132527}
   m_Father: {fileID: 9133739062559050840}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1507,6 +1522,83 @@ Transform:
   m_Father: {fileID: 6038241416656729566}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5630538385617875754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3641462918607132527}
+  - component: {fileID: 9053193345175463644}
+  - component: {fileID: 6122618335195145137}
+  - component: {fileID: 3631957579494307194}
+  m_Layer: 0
+  m_Name: WeaponLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3641462918607132527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630538385617875754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.076, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4767812228083722082}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9053193345175463644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630538385617875754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fa7c4900ff07146bba396aa8488dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCollider: {fileID: 8918919582531694287}
+--- !u!136 &6122618335195145137
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630538385617875754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 1.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3631957579494307194
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630538385617875754}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5660258370900545776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,8 +2500,8 @@ Transform:
   m_GameObject: {fileID: 7576486198976717042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.934, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2277825662610724170}
   m_Father: {fileID: 0}
@@ -2496,8 +2588,12 @@ MonoBehaviour:
   <Controller>k__BackingField: {fileID: 8918919582531694287}
   <ForceReceiver>k__BackingField: {fileID: 7168384389296861089}
   <Agent>k__BackingField: {fileID: 6138649051403086699}
+  <Weapon>k__BackingField: {fileID: 9053193345175463644}
   <MovementSpeed>k__BackingField: 3
   <PlayerChasingRange>k__BackingField: 10
+  <AttackRange>k__BackingField: 3
+  <AttackDamage>k__BackingField: 20
+  <AttackKnockback>k__BackingField: 20
 --- !u!114 &7168384389296861089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2511,6 +2607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 8918919582531694287}
+  agent: {fileID: 6138649051403086699}
   drag: 0.1
 --- !u!1 &7891704542697044530
 GameObject:
