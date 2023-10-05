@@ -831,12 +831,12 @@ PrefabInstance:
     - target: {fileID: 1882893521957426251, guid: 27763e7b88957b744b90654687754c92,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017084885
+      value: -0.000000017084886
       objectReference: {fileID: 0}
     - target: {fileID: 1882893521957426251, guid: 27763e7b88957b744b90654687754c92,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000020411457
+      value: 0.000000002041146
       objectReference: {fileID: 0}
     - target: {fileID: 1882893522077288203, guid: 27763e7b88957b744b90654687754c92,
         type: 3}
@@ -2322,11 +2322,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7347539661203820620, guid: c483be4616c589b4e8876cbcf12a73b7,
-        type: 3}
-      propertyPath: <AttackDamage>k__BackingField
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7393425832173901229, guid: c483be4616c589b4e8876cbcf12a73b7,
         type: 3}
